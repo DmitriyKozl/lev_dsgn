@@ -1,36 +1,41 @@
 @import "normalize.css";
 @import "mediaQueries.scss";
-
-@mixin center {
+@mixin center() {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 @font-face {
-  font-family: 'bahnschrift';
-  src: url('../Bahnschrift-Font-Family/BAHNSCHRIFT1.TTF')  format('truetype'), /* Safari, Android, iOS */
+  font-family: "bahnschrift";
+  src: url("../Bahnschrift-Font-Family/BAHNSCHRIFT1.TTF") format("truetype"); /* Safari, Android, iOS */
 }
 
-h1,h2,h3,h4{
-  font-family: 'bahnschrift';
-  color:black;
+h1,
+h2,
+h3,
+h4 {
+  font-family: "bahnschrift";
+  color: black;
   font-size: 4rem;
   margin: 0;
   z-index: 3333;
 }
 
-p,a,label{
-  font-family: 'bahnschrift';
+p,
+a,
+label {
+  font-family: "bahnschrift";
   color: #707070;
   z-index: 3333;
-
+  font-size: 1.3rem
 }
-section{
+section {
   @include center;
   justify-content: space-evenly;
   height: 100vh;
   max-width: 1200px;
   margin: auto;
+  padding: 4rem 0;
   .content_title {
     // width: 50%;
     @include center;
@@ -42,6 +47,198 @@ section{
       background: black;
       display: flex;
       z-index: 3333;
+    }
+  }
+}
+.banner {
+  @include center;
+  height: 140px;
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
 
-    }}
+  &_title {
+    margin-left: auto;
+    h1 {
+      color: #707070;
+      margin-right: auto;
+      font-size: 3rem;
+      margin-left: 1rem;
+    }
+  }
+
+  .figures {
+    position: relative;
+    max-width: 600px;
+    @include center;
+    margin: auto;
+
+    .bigS {
+      width: 300px;
+      height: 300px;
+      background: #ffd700;
+      margin: auto;
+    }
+
+    .lineS {
+      width: 600px;
+      height: 70px;
+      position: absolute;
+      background: transparent;
+      border: 2.5px solid #ffd700;
+      top: 5rem;
+      z-index: 0;
+    }
+    .fillS {
+      width: 500px;
+      height: 70px;
+      position: absolute;
+      background: #0073b6;
+      top: 6rem;
+      z-index: 1;
+    }
+  }
+}
+.about {
+  &_image {
+    @include center;
+    position: relative;
+    &_container {
+      width: 400px;
+      margin-top: 4rem;
+      img {
+        width: 100%;
+        object-fit: contain;
+        z-index: 1;
+        position: relative;
+        margin-top: auto;
+        margin-right: auto;
+        box-shadow: 7px -7px 0 white, 10px -10px 0 black;
+      }
+    }
+    // &_outline {
+    //   width: 400px;
+    //   height: 100%;
+    //   // padding: 0 2rem;
+    //   background: transparent;
+    //   border: 2.5px solid black;
+    //   position: absolute;
+    //   z-index: 0;
+    //   bottom: 2rem;
+    //   right:0;
+    // }
+  }
+  .content {
+    @include center;
+    position: relative;
+    justify-content: space-around;
+    flex-direction: column;
+    height: 70%;
+    width: 100%;
+    text-align: left;
+    &_title {
+      margin-left: auto;
+      margin-right: 4rem;
+    }
+    h2 {
+      // margin-right: auto;
+    }
+    &_text {
+      max-width: 50ch;
+      margin: auto;
+    }
+    .circle,
+    .outlineCircle {
+      position: absolute;
+      width: 200px;
+      height: 200px;
+      border-radius: 100px;
+      top: 0;
+      z-index: 1;
+    }
+    .circle {
+      background: #ffc7c7;
+      right: 2rem;
+    }
+    .outlineCircle {
+      background: transparent;
+      border: 2.5px solid #0073b6;
+      top: 2rem;
+      right: 0;
+      z-index: 0;
+    }
+  }
+  .test {
+    width: 90%;
+    display: flex;
+    p {
+      max-width: 70ch;
+    }
+  }
+}
+.work {
+  .content_title {
+    position: relative;
+
+    .triangle {
+      position: absolute;
+      z-index: 1;
+      width: 0;
+      height: 0;
+      border-top: 150px solid transparent;
+      border-right: 200px solid #0073b6;
+      border-bottom: 100px solid transparent;
+    }
+    .outlineTriangle {
+      position: absolute;
+      width: 2.5px;
+      background: #ffd700;
+      height: 250px;
+      right: 4rem;
+      z-index: 0;
+      &::after {
+        content: "";
+        position: absolute;
+        width: 2px;
+        background: #ffd700;
+        height: 250px;
+        right: 4rem;
+        z-index: 0;
+        right: 5.5rem;
+        top: -2.3rem;
+        transform: rotate(45deg);
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        width: 2.5px;
+        background: #ffd700;
+        height: 200px;
+        z-index: 0;
+        left: -4.7rem;
+        bottom: -2.4rem;
+        transform: rotate(-50deg);
+      }
+    }
+  }
+  .logos {
+    @include center;
+    flex-wrap: wrap;
+    width: 500px;
+    overflow: scroll;
+    overflow-x: hidden;
+    height: 500px;
+    touch-action: pan-up;
+    .logo {
+      @include center;
+      flex-wrap: wrap;
+      &_image {
+        flex: 1 1 500px;
+        width: 500px;
+        height: 500px;
+        object-fit: scale-down;
+        object-position: center;
+      }
+    }
+  }
 }

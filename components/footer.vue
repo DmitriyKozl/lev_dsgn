@@ -59,9 +59,9 @@
         </div>
       </form>
     </section>
-    <footer>
+    <!-- <footer>
       <h5>Made by Dmitriy S.</h5>
-    </footer>
+    </footer> -->
   </div>
 </template>
 
@@ -94,8 +94,8 @@ export default {
   justify-content: center;
 }
 .Mailcontainer {
-  height: 80vh;
-
+  height: 70vh;
+max-width: 1400px;  	
   .Contact_text {
     position: relative;
     text-align: left;
@@ -103,8 +103,15 @@ export default {
     @include center();
     flex-direction: column;
     justify-content: space-evenly;
-    width: 100%;
-    height: 80%;
+    height: 100%;
+    margin:auto ;
+
+    h4{
+          margin: 2rem 0;
+    }
+    p{
+      font-size: 1.5rem;
+    }
     .square {
       position: absolute;
     width: 150px;
@@ -166,6 +173,8 @@ export default {
     @include center();
     flex-direction: column;
     width: 50%;
+    margin:auto ;
+
 
     &-content {
       @include center();
