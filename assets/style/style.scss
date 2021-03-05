@@ -52,7 +52,6 @@ section {
 }
 .banner {
   @include center;
-  height: 140px;
   max-width: 1200px;
   margin: auto;
   text-align: center;
@@ -99,7 +98,8 @@ section {
     }
   }
 }
-.about {
+.about {    padding: 0;
+
   &_image {
     @include center;
     position: relative;
@@ -176,69 +176,4 @@ section {
     }
   }
 }
-.work {
-  .content_title {
-    position: relative;
 
-    .triangle {
-      position: absolute;
-      z-index: 1;
-      width: 0;
-      height: 0;
-      border-top: 150px solid transparent;
-      border-right: 200px solid #0073b6;
-      border-bottom: 100px solid transparent;
-    }
-    .outlineTriangle {
-      position: absolute;
-      width: 2.5px;
-      background: #ffd700;
-      height: 250px;
-      right: 4rem;
-      z-index: 0;
-      &::after {
-        content: "";
-        position: absolute;
-        width: 2px;
-        background: #ffd700;
-        height: 250px;
-        right: 4rem;
-        z-index: 0;
-        right: 5.5rem;
-        top: -2.3rem;
-        transform: rotate(45deg);
-      }
-      &::before {
-        content: "";
-        position: absolute;
-        width: 2.5px;
-        background: #ffd700;
-        height: 200px;
-        z-index: 0;
-        left: -4.7rem;
-        bottom: -2.4rem;
-        transform: rotate(-50deg);
-      }
-    }
-  }
-  .logos {
-    @include center;
-    flex-wrap: wrap;
-    width: 500px;
-    overflow: scroll;
-    overflow-x: hidden;
-    height: 500px;
-    touch-action: pan-up;
-    .logo {
-      @include center;
-      flex-wrap: wrap;
-      &_image {
-        flex: 1 1 500px;
-        width: 500px;
-        height: 500px;
-        object-fit: scale-down;
-        object-position: center;
-      }
-    }
-  }
-}

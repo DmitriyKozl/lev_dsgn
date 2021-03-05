@@ -42,15 +42,15 @@ export default {
   padding-top: 1rem;
   position: fixed;
   width: 70%;
-  // left: 7rem;
   // height: 100px;
       top: 1rem;
+left: 5rem;
 
 
   nav {
     @include center;
     width: 500px;
-    height: 70px;
+    height: 50px;
     padding: 0 2rem;
     background: #ffc7c7;
     position: relative;
@@ -66,7 +66,7 @@ export default {
   }
   .square {
     width: 500px;
-    height: 70px;
+    height: 50px;
     padding: 0 2rem;
     background: transparent;
     border: 2.5px solid #0073b6;

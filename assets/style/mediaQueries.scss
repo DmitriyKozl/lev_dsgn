@@ -66,68 +66,7 @@
   .navigation.screen {
     display: none;
   }
-  // .navigation.mobile {
-  //   // display: grid;
-  //   // place-items: center;
-  //   height: 100px;
-  //   width: 100%;
-  //   .hamburger {
-  //     cursor: pointer;
-  //     position: relative;
-  //     width: 70px;
-
-  //     &_bigS {
-  //       width: 50px;
-  //       height: 50px;
-  //       background: #ffd700;
-  //       margin: auto;
-  //     }
-
-  //     &_lineS {
-  //       width: 100px;
-  //       height: 10px;
-  //       position: absolute;
-  //       background: transparent;
-  //       border: 2.5px solid #ffd700;
-  //       top: 0.5rem;
-  //       left: -1rem;
-  //       z-index: 0;
-  //     }
-  //     &_fillS {
-  //       width: 80px;
-  //       height: 10px;
-  //       position: absolute;
-  //       background: #0073b6;
-  //       top: 1rem;
-  //       z-index: 1;
-  //       left: 0;
-  //       nav {
-  //         display: flex;
-  //         justify-content: space-evenly;
-  //         align-items: center;
-  //         padding: 0 2rem;
-  //         position: relative;
-  //         z-index: 33;
-  //         a {
-  //           color: white;
-  //           padding: 0 4rem;
-  //           font-size: 1.5rem;
-  //           font-family: "bahnschrift";
-  //           cursor: pointer;
-  //         }
-  //       }
-  //       &:hover {
-  //         width: 500px;
-  //         height: 70px;
-  //         top: 0;
-  //         left: -5rem;
-  //         display: flex;
-  //         justify-content: center;
-  //         align-items: center;
-  //       }
-  //     }
-  //   }
-  // }
+ 
   .banner {
     min-height: 50vh;
 padding: 4rem 0;

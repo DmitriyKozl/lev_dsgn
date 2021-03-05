@@ -9,7 +9,7 @@
           of coffee? Please don’t hesitate to contact me.
         </p>
         <div class="lang">
-          <div class="icon"><a href="">in</a></div>
+          <div class="icon"><a href="https://www.linkedin.com/in/daan-van-de-verre-6a4206162/">in</a></div>
        
         </div>
       </div>
@@ -116,7 +116,6 @@ max-width: 1400px;
       position: absolute;
     width: 150px;
         height: 150px;
-      top: 0;
       z-index: 0;
       background: transparent;
       border: 2.5px solid #ffc7c7;
@@ -131,7 +130,7 @@ max-width: 1400px;
         background: transparent;
         border: 2.5px solid #0073b6;
         top: 2rem;
-        right: 3rem;
+        right: 2rem;
         z-index: 1;
         position: absolute;
       }
@@ -141,7 +140,7 @@ max-width: 1400px;
         background: transparent;
         border: 2.5px solid #ffd700;
         top: 1rem;
-        right:2rem;
+        right:1rem;
         z-index: 2;
           width: 150px;
         height: 150px;
@@ -172,7 +171,7 @@ max-width: 1400px;
   .form {
     @include center();
     flex-direction: column;
-    width: 50%;
+    width: 70%;
     margin:auto ;
 
 
