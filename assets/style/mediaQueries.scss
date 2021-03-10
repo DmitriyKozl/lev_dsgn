@@ -58,6 +58,9 @@
   }
 }}
 @include for-tablet-landscape {
+  html{
+    overflow:unset;
+  }
   .banner,#work,#about,#contact{
     background-image:url('../images/forms.png');
     background-position: center;

@@ -1,7 +1,7 @@
 <template>
   <div class="landingpage">
     <div class="title"><h1>Daan Van de Verre</h1>
-    <p>Creative soul in heart and neeren</p></div>
+    <h2>gives  soul to  creative passion </h2></div>
   <nav class="landingpage_nav">    
     <div class="landingpage_nav_circle"><g-link to="/home#about">About</g-link></div>
     <div class="landingpage_nav_triangle"><g-link to="/work">Work</g-link></div>
@@ -77,4 +77,7 @@ a{
   font-size: 3rem;
     color: white;
   }} 
+  h2{
+  font-size: 1.5rem;
+}
 </style>

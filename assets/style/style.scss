@@ -27,7 +27,7 @@ label {
   font-family: "bahnschrift";
   color: #707070;
   z-index: 3333;
-  font-size: 1.3rem
+  font-size: 1.3rem;
 }
 section {
   @include center;
@@ -116,17 +116,7 @@ section {
         box-shadow: 7px -7px 0 white, 10px -10px 0 black;
       }
     }
-    // &_outline {
-    //   width: 400px;
-    //   height: 100%;
-    //   // padding: 0 2rem;
-    //   background: transparent;
-    //   border: 2.5px solid black;
-    //   position: absolute;
-    //   z-index: 0;
-    //   bottom: 2rem;
-    //   right:0;
-    // }
+  
   }
   .content {
     @include center;
@@ -176,4 +166,6 @@ section {
     }
   }
 }
-
+input,textarea {
+  font-family: "bahnschrift";
+  color: black;}

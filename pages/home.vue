@@ -1,37 +1,35 @@
 <template>
   <Layout>
     <div>
-    <section class="about" id="about">
-      <div class="about_image">
-        <div class="about_image_container">
-          <img src="@/assets/images/daan.jpg" alt="">
+      <section class="about" id="about">
+        <div class="about_image">
+          <div class="about_image_container">
+            <img src="@/assets/images/daan.jpg" alt="" />
+          </div>
         </div>
-      </div>
-      <div class="content">
-        <div class="circle"></div>
-        <div class="outlineCircle"></div>
-        <div class="content_title">
-          <h2>About</h2>
-        </div> 
-       
-        <div class="content_text">
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus
-            facilis, at tenetur commodi, eius eum iure amet minima veritatis
-            eaque reprehenderit dolores itaque recusandae! Maiores cum vel, hic
-            explicabo laudantium voluptates nulla repudiandae deserunt voluptate
-            libero fuga asperiores iure dolor! Lorem ipsum dolor sit amet,
-            consectetur adipisicing elit. Delectus facilis, at tenetur commodi,
-            eius eum iure amet minima veritatis eaque reprehenderit dolores
-            itaque recusandae! Maiores cum vel, hic explicabo laudantium
-            voluptates nulla repudiandae deserunt voluptate libero fuga
-            asperiores iure dolor!
-          </p>
+        <div class="content">
+          <div class="circle"></div>
+          <div class="outlineCircle"></div>
+          <div class="content_title">
+            <h2>About</h2>
+          </div>
+
+          <div class="content_text">
+            <p>
+              Strong and creative communications professional with a Ba in
+              Communication Management and a fingerspitzengefühl for Lay-Out and
+              Graphic Design... that's German for being damn good. I am Daan,
+              born in '98 and ready for some hands-on experience in
+              communications! I love creating content from scratch that is
+              simple, efficient, and easy-going. Oh and it has to look nice as
+              well, that's a must. For my design work, I let myself inspire by
+              my surroundings, how absurd they may be. I am an observer, and
+              that helps. I see opportunities, not problems.
+            </p>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
     </div>
- 
   </Layout>
 </template>
 <script>
@@ -41,13 +39,12 @@ export default {
   components: {
     Layout,
   },
-
 };
 </script>
 
-<style lang="scss" >
-
-html{
-  overflow: hidden;
+<style lang="scss">
+html {
+  // overflow: hidden;
 }
+
 </style>

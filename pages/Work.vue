@@ -30,6 +30,7 @@
   </div>
 </template>
 <script>
+
 export default {
   data() {
     return {
@@ -77,7 +78,7 @@ html {
 
 .work {
   @include center();
-  height: 100%;
+  // height: 100%;
   flex-direction: column;
   background-image: url("../assets/images/lines.png");
   background-size: contain;
@@ -168,6 +169,7 @@ html {
   footer {
     width: 100%;
     @include center;
+    // margin: 2rem 0;
     justify-content: space-between;
     a {
       padding: 1rem;
