@@ -3,9 +3,9 @@
     <div class="title"><h1>Daan Van de Verre</h1>
     <p>Creative soul in heart and neeren</p></div>
   <nav class="landingpage_nav">    
-    <div class="landingpage_nav_circle"><a href="/home#about">About</a></div>
-    <div class="landingpage_nav_triangle"><a href="/home#contact">Work</a></div>
-<div class="landingpage_nav_square"><a href="/home#work">Contact</a></div>
+    <div class="landingpage_nav_circle"><g-link to="/home#about">About</g-link></div>
+    <div class="landingpage_nav_triangle"><g-link to="/work">Work</g-link></div>
+<div class="landingpage_nav_square"><g-link to="/home#contact">Contact</g-link></div>
   </nav>
   </div>
 

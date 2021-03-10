@@ -1,5 +1,9 @@
 <template>
   <div id="contact">
+  <div class="Contactbanner">
+          <Nav />        
+
+    </div>
     <section class="Mailcontainer">
       <div class="Contact_text">
         <div class="square"></div>
@@ -66,7 +70,13 @@
 </template>
 
 <script>
+import Nav from "~/components/Nav.vue";
+
+
 export default {
+  components: {
+    Nav
+  },
   name: "Footer",
   data: function() {
     return {
@@ -93,6 +103,13 @@ export default {
   display: flex;
   justify-content: center;
 }
+ .Contactbanner {
+    @include center();
+    justify-content: space-between;
+    height: 100px;
+    position: relative;
+ 
+  }
 .Mailcontainer {
   height: 70vh;
 max-width: 1400px;  	
@@ -224,20 +241,20 @@ max-width: 1400px;
     background: transparent;
   }
 }
-footer {
-  height: 80px;
-  width: 100%;
-  background-image:url('../assets/images/forms.png');
-  background-position: center;
-  background-size: contain;
-  @include center();
-  h5{
-    margin:2rem auto auto 1rem ;
-    // background:#ffc7c7;
-    padding:0.3rem 1rem;
-    font-size: 0.6rem;
-      font-family: 'bahnschrift';
+// footer {
+//   height: 80px;
+//   width: 100%;
+//   background-image:url('../assets/images/forms.png');
+//   background-position: center;
+//   background-size: contain;
+//   @include center();
+//   h5{
+//     margin:2rem auto auto 1rem ;
+//     // background:#ffc7c7;
+//     padding:0.3rem 1rem;
+//     font-size: 0.6rem;
+//       font-family: 'bahnschrift';
 
-  }
-}
+//   }
+// }
 </style>

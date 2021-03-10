@@ -3,22 +3,18 @@
     <div class="navigation screen">
       <div class="square"></div>
       <nav>
-        <a href="#about">About</a>
-        <a href="#work">Work</a>
-        <a href="#contact">Contact</a>
+        <g-link to="/home#about">About</g-link>
+        <g-link to="/work/">Work</g-link>
+        <g-link to="/home#contact">Contact</g-link>
       </nav>
     </div>
     <div class="navigation mobile">
       <div class="hamburger">
         <div class="hamburger_bigS"></div>
-          <div class="hamburger_fillS">
-             <nav>
-        <!-- <a href="#about">About</a>
-        <a href="#work">Work</a>
-        <a href="#contact">Contact</a> -->
-      </nav>
-          </div>
-          <div class="hamburger_lineS"></div>
+        <div class="hamburger_fillS">
+          <nav></nav>
+        </div>
+        <div class="hamburger_lineS"></div>
       </div>
     </div>
   </div>
@@ -40,12 +36,11 @@ export default {
   max-width: 1200px;
   // margin: auto;
   padding-top: 1rem;
-  position: fixed;
+  position: absolute;
   width: 70%;
   // height: 100px;
-      top: 1rem;
-left: 5rem;
-
+  top: 1rem;
+  left: 5rem;
 
   nav {
     @include center;

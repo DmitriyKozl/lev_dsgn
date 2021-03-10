@@ -1,9 +1,6 @@
 <template>
   <Layout>
-    <div class="banner">
-          <Nav />        
-
-    </div>
+    <div>
     <section class="about" id="about">
       <div class="about_image">
         <div class="about_image_container">
@@ -33,40 +30,24 @@
         </div>
       </div>
     </section>
-    
+    </div>
  
   </Layout>
 </template>
 <script>
 import Layout from "~/layouts/Default.vue";
-import Nav from "~/components/Nav.vue";
 
 export default {
-  metaInfo: "home",
   components: {
-    Layout,Nav,
-    Slider
+    Layout,
   },
-  data() {
-   
-  },
+
 };
 </script>
 
-<style lang="scss" scoped>
-@mixin center() {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.logos{
-  width: 100vw;
-  height: 100%;
-  @include center();
-  background: #ffd9007e;
-  position: absolute;
-  z-index: 100000000000;
-  // top: 0;
-}
+<style lang="scss" >
 
+html{
+  overflow: hidden;
+}
 </style>

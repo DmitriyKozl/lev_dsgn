@@ -1,95 +1,181 @@
 <template>
   <div class="work" id="work">
-    <div class="content_title">
-      <div class="triangle"></div>
-      <h3>Work</h3>
+    <div class="togglenav">
+      <div @click="logoToggle" class="logoTypes"><a>Logotypes</a></div>
+      <div @click="templateToggle" class="templateLink"><a>Templates</a></div>
     </div>
-    <!-- <div class="logos">
-      <div class="expand">
-          <img src="@/assets/images/EXPAND.png" alt="" />
-        </div> 
-
+    <section v-if="logo" class="logo_container">
+      <div v-for="image in workImages" :key="image" class="logos">
+        <g-image
+          :src="require('!!assets-loader!~/assets/images/' + image)"
+          class="logo"
+        ></g-image>
       </div>
-     -->
+    </section>
+    <section v-if="template" class="template_container">
+      <div v-for="template in templates" :key="template.id" class="templates">
+        <g-image
+          :src="require('!!assets-loader!~/assets/images/' + template.src)"
+          class="template"
+        ></g-image>
+        <a href="~/assets/images/ResumeTemplate.pdf">Download pdf</a>
+      </div>
+    </section>
+    <footer>
+   <g-link to="/home#about"> <span class="left" >&#9664;</span>  About </g-link>
+      <g-link to="/home#contact"
+        >Contact <span class="right">&#9654;</span></g-link
+      >
+    </footer>
   </div>
 </template>
 <script>
-import Slider from "~/components/Slider.vue";
-
 export default {
-  metaInfo: "home",
-  components: {
-    Slider,
+  data() {
+    return {
+      logo: true,
+      template: false,
+      workImages: [
+        "Spik&Span.jpg",
+        "Ravenpoint.jpg",
+        "Cheaux.jpg",
+        "devriendendienst.jpg",
+        "Hilsani.jpg",
+        "RavenpointPodcast.jpg",
+      ],
+      templates: [
+        { id: 1, src: "ResumeTemplate.jpg" },
+        { id: 2, src: "ResumeTemplate.jpg" },
+        { id: 3, src: "ResumeTemplate.jpg" },
+      ],
+    };
   },
-  // data() {
-  //   return {
-  //     workImages: [
-  //       "images/Spik&Span.jpg",
-  //       "images/Ravenpoint.jpg",
-  //       "images/Cheaux.jpg",
-  //       "images/devriendendienst.jpg",
-  //       "images/Hilsani.jpg",
-  //       "images/RavenpointPodcast.jpg",
-  //     ],
-  //   };
-  // },
+
+  methods: {
+    logoToggle() {
+      this.logo = true;
+      this.template = false;
+    },
+    templateToggle() {
+      this.template = true;
+      this.logo = false;
+    },
+  },
 };
 </script>
 
 <style lang="scss" scoped>
+html {
+  overflow: visible;
+  height: 100%;
+}
 @mixin center() {
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 .work {
+  @include center();
+  height: 100%;
   flex-direction: column;
-  z-index: 4;
-
-  .content_title {
-    width: 25%;
-    z-index: 3;
-    position: relative;
-    // @include center;
-
-
-    h3 {
-      position: absolute;
-      top: 40%;
-      left: 25%;
-      
+  background-image: url("../assets/images/lines.png");
+  background-size: contain;
+  background-position: center;
+  nav {
+    margin: auto;
+    @include center();
+    flex-direction: column;
+    justify-content: space-around;
+    .logoTypes,
+    .templateLink {
+      margin: 3rem;
+      cursor: pointer;
+      a {
+        padding: 1rem;
+      }
     }
-
-    .triangle {
-      width: 0;
-      height: 0;
-      border-top: 150px solid transparent;
-      border-right: 200px solid #0073b6;
-      border-bottom: 100px solid transparent;
+    .logoTypes {
+      a {
+        padding: 2rem;
+        border: 5px solid #0073b6;
+        background: rgba(255, 255, 255, 0.63);
+      }
     }
-    
-    
+    .templateLink {
+      a {
+        background: rgba(255, 255, 255, 0.63);
+        padding: 2rem;
+        border: 5px solid #ffc7c7;
+        color: #0073b6;
+      }
+    }
   }
-  // .logos {
-  //   @include center;
-  //   flex-wrap: wrap;
-  //   width: 500px;
-  // overflow: scroll;
-  // overflow-x: hidden;
-  //   height: 500px;
-  //   touch-action: pan-up;
-  //   position: relative;
-  //   .logo {
-  //     @include center;
-  //     flex-wrap: wrap;
-  //     &_image {
-  //       flex: 1 1 500px;
-  //       width: 500px;
-  //       height: 500px;
-  //       object-fit: scale-down;
-  //       object-position: center;
-  //     }
-  //   }
-  // }
+  .togglenav {
+    margin: auto;
+    @include center();
+    .logoTypes,
+    .templateLink {
+      margin: 1rem;
+      @include center();
+
+      cursor: pointer;
+      a {
+        padding: 1rem;
+      }
+    }
+    .logoTypes {
+      a {
+        padding: 1rem;
+        border-bottom: 5px solid #0073b6;
+      }
+    }
+    .templateLink {
+      a {
+        padding: 1rem;
+        border-bottom: 5px solid #ffc7c7;
+      }
+    }
+  }
+  .logo_container,
+  .template_container {
+    // display: none;
+    // flex-direction: column;
+    @include center;
+    flex-wrap: wrap;
+    flex: 1 0 200px;
+    padding-bottom: 4rem;
+    padding-top: 0;
+
+    .logos,
+    .templates {
+      width: 300px;
+      height: 300px;
+      margin: 1rem;
+      @include center;
+      .logo,
+      .template {
+        width: 75%;
+        height: 75%;
+        object-fit: contain;
+      }
+    }
+    .templates {
+      flex-direction: column;
+      justify-content: space-around;
+    }
+  }
+  footer {
+    width: 100%;
+    @include center;
+    justify-content: space-between;
+    a {
+      padding: 1rem;
+
+      span {
+        transform: rotate(180deg);
+      }
+    }
+  }
 }
 </style>

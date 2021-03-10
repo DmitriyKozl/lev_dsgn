@@ -1,6 +1,6 @@
 <template>
   <div class="layout">
-    <!-- <Nav /> -->
+    <Nav />
     <slot/>
         <Footer />
 
@@ -15,14 +15,14 @@ query {
 }
 </static-query>
 <script>
-// import Nav from "~/components/Nav.vue";
+import Nav from "~/components/Nav.vue";
 import Footer from "~/components/footer.vue";
 
 export default {
   metaInfo: "Daan",
   components: {
 Footer,
-// Nav
+Nav
   },
 };  
 
