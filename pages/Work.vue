@@ -2,7 +2,6 @@
   <div class="work" id="work">
     <div class="togglenav">
       <div @click="logoToggle" class="logoTypes"><a>Logotypes</a></div>
-      <div @click="templateToggle" class="templateLink"><a>Templates</a></div>
     </div>
     <section v-if="logo" class="logo_container">
       <div v-for="image in workImages" :key="image" class="logos">
@@ -78,7 +77,7 @@ html {
 
 .work {
   @include center();
-  // height: 100%;
+  height: 100vh;
   flex-direction: column;
   background-image: url("../assets/images/lines.png");
   background-size: contain;
