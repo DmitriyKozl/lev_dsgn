@@ -1,7 +1,9 @@
 <template>
   <Layout>
-    <div>
-      <section class="about" id="about">
+
+    <div id="about">
+      
+      <section class="about" >
         <div class="about_image">
           <div class="about_image_container">
             <img src="@/assets/images/daan.jpg" alt="" />
@@ -43,8 +45,12 @@ export default {
 </script>
 
 <style lang="scss">
-html {
-  // overflow: hidden;
+#about{
+  width: 100%;
+  margin:auto;
 }
-
+// .workLink{
+//   display: none;
+// }
 </style>
++EXq<m7[u%LaL59@

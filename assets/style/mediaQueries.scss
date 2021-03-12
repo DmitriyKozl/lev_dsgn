@@ -1,3 +1,8 @@
+@mixin center() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 @mixin for-phone-only {
   @media (max-width: 599px) {
     @content;
@@ -23,57 +28,83 @@
     @content;
   }
 }
-@include for-big-desktop{
-  .banner{
+@include for-big-desktop {
+  .banner {
     justify-content: space-between;
     max-height: 70vh;
     .figures {
-    position: relative;
-    max-width: 900px;
-    // margin: auto;
-    .bigS {
-      width: 600px;
-      height: 600px;
-      background: #ffd700;
+      position: relative;
+      max-width: 900px;
       // margin: auto;
-    }
+      .bigS {
+        width: 600px;
+        height: 600px;
+        background: #ffd700;
+        // margin: auto;
+      }
 
-    .lineS {
-      width: 900px;
-      height: 70px;
-      position: absolute;
-      background: transparent;
-      border: 2.5px solid #ffd700;
-      top: 5rem;
-      z-index: 0;
-    }
-    .fillS {
-      width: 800px;
-      height: 70px;
-      position: absolute;
-      background: #0073b6;
-      top: 6rem;
-      z-index: 1;
+      .lineS {
+        width: 900px;
+        height: 70px;
+        position: absolute;
+        background: transparent;
+        border: 2.5px solid #ffd700;
+        top: 5rem;
+        z-index: 0;
+      }
+      .fillS {
+        width: 800px;
+        height: 70px;
+        position: absolute;
+        background: #0073b6;
+        top: 6rem;
+        z-index: 1;
+      }
     }
   }
-}}
+}
 @include for-tablet-landscape {
-  html{
-    overflow:unset;
+  html {
+    overflow: unset;
   }
-  .banner,#work,#about,#contact{
-    background-image:url('../images/forms.png');
+  .layout{
+        background-image: url("../images/forms.png");
     background-position: center;
     background-size: contain;
   }
-  .navigation.screen {
-    display: none;
-  }
+  body{
+    position: relative;
+
+    .Contactbanner{
+      display: none;
+    }
  
+  .navigation.screen {
+    position: relative;
+    left: unset;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+  //  max-width: 600px;
+  //  display: none;
+  width: 400px;
+
+  .square {
+display: none;
+  }
+nav{
+  width: 100%;
+  margin: auto;
+a{
+  padding:0 2rem;
+}  }}
+
   .banner {
     min-height: 50vh;
-padding: 4rem 0;
-display: block;
+    padding: 4rem 0;
+    display: block;
     &_title {
       width: 100%;
       h1 {
@@ -94,7 +125,7 @@ display: block;
   .about {
     flex-direction: column-reverse;
     height: unset;
-    &_image{
+    &_image {
       width: 50%;
     }
     .content {
@@ -107,16 +138,16 @@ display: block;
         width: 100%;
         align-self: flex-start;
       }
+      .content_text{
+        max-width: 35ch;
+
+      }
     }
   }
   #work {
     flex-direction: column;
-    .triangle {
-      display: none;
-    }
-    .outlineTriangle {
-      display: none;
-    }
+    height: unset;
+    padding: 5rem 0;
     .logos {
       width: 300px;
       height: 300px;
@@ -131,14 +162,18 @@ display: block;
   }
 
   #contact {
-    height: 100vh;
+    // height: 100vh;
+    height: unset;
+    padding: 5rem 0;
     .Mailcontainer {
       flex-direction: column;
-      width: 80%;
+      width: 100%;
       margin: auto;
+      position: unset;
+      height: unset;
       .Contact_text {
         margin: auto;
-        width: 70%;
+        max-width: 35ch;
         p {
           font-size: 1.2rem;
         }
@@ -149,12 +184,29 @@ display: block;
       .lang {
         display: none;
       }
+      .form_container{
+        position: unset;
+        width: 100%;
+    
       form {
         width: 100%;
-      }
+      }  }
     }
-    footer {
-      display: none;
-    }
+    
   }
+  .landingpage{
+  display: grid;
+  place-items: center;
+  .title{
+    display: none;
+  }
+  }
+ .landingpage_nav{
+   flex-direction: column;
+   margin: auto;
+   &_circle,&_triangle,&_square{
+    max-width: 200px;
+     max-height: 200px;
+   }
+ } }
 }

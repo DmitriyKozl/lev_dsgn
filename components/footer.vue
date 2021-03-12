@@ -1,9 +1,8 @@
 <template>
-  <div id="contact">
-    <div class="Contactbanner">
-      <Nav />
-    </div>
-    <section class="Mailcontainer">
+<div id="contact">
+  <section >
+
+    <div class="Mailcontainer">
       <div class="Contact_text">
         <div class="square"></div>
         <h4>Contact</h4>
@@ -17,13 +16,18 @@
               >in</a
             >
           </div>
+           <div class="insta">
+            <a href="https://www.instagram.com/lev.dsgn/"
+              ><img src="@/assets/images/Instagram_icon-icons.com_66804.png" alt=""></a
+            >
+          </div>
         </div>
       </div>
       <div class="form_container">
-        <form class="form" @submit.prevent="sendEmail">
+        <form  method="post" action=" " class="form" @submit.prevent="sendEmail">
           <div class="form-content">
             <div class="form-content-name">
-              <label class="label" for="name">Naam</label>
+              <label class="label" for="name">Name</label>
               <input
                 type="text"
                 name="name"
@@ -33,7 +37,7 @@
               />
             </div>
             <div class="form-content-surname">
-              <label class="label" for="surname">Voornaam</label>
+              <label class="label" for="surname">Surname</label>
               <input
                 type="text"
                 name="surname"
@@ -54,7 +58,7 @@
             />
           </div>
           <div class="form-text">
-            <label class="label" for="textarea">Bericht</label>
+            <label class="label" for="textarea">Message</label>
             <textarea
               class="message"
               name="message"
@@ -63,21 +67,23 @@
               v-model="message.text"
             ></textarea>
           </div>
-        <button type="submit" class="plane-send">
-          <g-image
-            class="material-icons"
-            data-content="send"
-            src="~/assets/images/telegram.png"
-            alt=""
-          >
-          </g-image>
-        </button>  </form>
+          <button
+            @click="activate"
+           :class="{active:isActive}" class="plane-send" type="" >
+            <g-image
+              class="material-icons"
+              data-content="send"
+              src="~/assets/images/telegram.png"
+              alt=""
+            >
+            </g-image>
+          </button>
+        </form>
       </div>
-    </section>
-    <!-- <footer>
-      <h5>Made by Dmitriy S.</h5>
-    </footer> -->
-  </div>
+    </div>
+  </section>
+ 
+</div>
 </template>
 
 <script>
@@ -92,6 +98,7 @@ export default {
   name: "Footer",
   data: function() {
     return {
+      isActive:false,
       name: "",
       surname: "",
 
@@ -127,38 +134,40 @@ export default {
         );
       e.target.reset();
     },
+    activate(){
+      return this.isActive = true;
+    }
   },
 };
 </script>
 
-<style lang="scss">
+<style  lang="scss" >
 @mixin center() {
   display: flex;
   justify-content: center;
 }
-.Contactbanner {
-  @include center();
-  justify-content: space-between;
-  height: 100px;
-  position: relative;
+#contact {
+  width: 100%;
+  padding-bottom: 0;
+  margin:auto
 }
+
 .Mailcontainer {
+  @include center();
+
   position: relative;
   height: 75vh;
-  max-width: 1200px;
+  width: 100%;
   .Contact_text {
     position: relative;
     text-align: left;
     max-width: 40ch;
     @include center();
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-around;
     height: 100%;
     margin: auto;
 
-    h4 {
-      margin: 2rem 0;
-    }
     p {
       font-size: 1.5rem;
     }
@@ -197,12 +206,12 @@ export default {
       }
     }
     .lang {
-      margin-right: auto;
       display: flex;
-      justify-content: baseline;
+      justify-content: space-evenly;
       align-items: center;
       text-align: left;
-      margin: 2rem auto 0 0;
+      margin: 0 auto 0 0;
+      width: 100%;
       .icon {
         background: #0073b6;
         // margin-right: 4rem;
@@ -213,12 +222,20 @@ export default {
           color: white;
           margin: 0;
         }
-      }
+        
+      }.insta{
+          object-fit: contain;
+          width: 50px;
+          height: 50px;
+          img{
+           width: 100%; 
+          }
+        }
     }
   }
   .form_container {
     width: 75%;
-
+  margin: auto;
     position: relative;
     height: 100%;
     .form {
@@ -227,7 +244,7 @@ export default {
       width: 100%;
       justify-content: space-around;
       margin-bottom: auto;
-
+    height: 80%;
       &-content {
         @include center();
         justify-content: space-between;
@@ -276,93 +293,90 @@ export default {
       outline: none;
       background: transparent;
     }
+  }
+@keyframes rotate-the-funk {
+  0% {
+    transform: rotate(360deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
 
-    @keyframes rotate-the-funk {
-      0% {
-        transform: rotate(360deg);
-      }
-      50% {
-        transform: rotate(0deg);
-      }
-      100% {
-        transform: rotate(-360deg);
-      }
-    }
-
-    @keyframes shadow {
-      0% {
-        transform: scale(1) translate(-20%, -10%);
-      }
-      25% {
-        transform: scale(0.5) translate(-20%, -10%);
-      }
-      50% {
-        transform: scale(1) translate(-20%, -10%);
-      }
-      75% {
-        transform: scale(0.5) translate(-20%, -10%);
-      }
-      100% {
-        transform: scale(1) translate(-20%, -10%);
-      }
-    }
+@keyframes shadow {
+  0% {
+    transform: scale(1) translate(-20%, -10%);
+  }
+  25% {
+    transform: scale(0.5) translate(-20%, -10%);
+  }
+  50% {
+    transform: scale(1) translate(-20%, -10%);
+  }
+  75% {
+    transform: scale(0.5) translate(-20%, -10%);
+  }
+  100% {
+    transform: scale(1) translate(-20%, -10%);
+  }
+}
 
 button {
-      width: 75px;
-      height: 75px;
-      display: grid;
-      place-items: center;
-      font-size: 2.85rem;
-      background-color: transparent;
-      border: 5px solid #0073b6;
-      border-radius: 100px;
-      position: absolute;
-      right: 50%;
-      margin-right: -75px;
-      bottom: -2rem;
-      overflow: hidden;
-      transform: translate(-100%, -100%);
-      transition: 1s border, 0.75s transform;
-      outline: none;
-      cursor: pointer;
-      .material-icons {
-        transform: rotate(360deg);
-        position: relative;
-        // padding: 1rem 1rem 1rem 1rem;
-        transform-origin: top center;
-        width: 75%;
-        height: 75%;
+  width: 75px;
+  height: 75px;
+  display: grid;
+  place-items: center;
+  font-size: 2.85rem;
+  background-color: transparent;
+  border: 5px solid #0073b6;
+  border-radius: 100px;
+  position: absolute;
+  right: 50%;
+  margin-right: -100px;
+  bottom: -2rem;
+  overflow: hidden;
+  transform: translate(-100%, -100%);
+  transition: 1s border, 0.75s transform;
+  outline: none;
+  cursor: pointer;
+  .material-icons {
+    transform: rotate(360deg);
+    position: relative;
+    // padding: 1rem 1rem 1rem 1rem;
+    transform-origin: top center;
+    width: 75%;
+    height: 75%;
 
-        object-fit: contain;
-        object-position: center;
-        // object-fit: scale-down;
-        @include center();
+    object-fit: contain;
+    object-position: center;
+    // object-fit: scale-down;
+    @include center();
 
-        &:before {
-          content: attr(data-content);
-          // position: absolute;
-          color: #0073b6;
-          left: 50%;
-          bottom: 0;
-          transform: scale(1) translate(-20%, -10%);
-          z-index: -1;
-          transform-origin: bottom center;
-        }
-      }
+    &:before {
+      content: attr(data-content);
+      // position: absolute;
+      color: #0073b6;
+      left: 50%;
+      bottom: 0;
+      transform: scale(1) translate(-20%, -10%);
+      z-index: -1;
+      transform-origin: bottom center;
+    }
+  }
+}
+.active{
+    transform: translate(-100%, calc(-100% + 2px));
 
-      &:hover {
-        transform: translate(-100%, calc(-100% + 2px));
-
-        .material-icons {
-          animation: rotate-the-funk 2.25s forwards;
-          &:before {
-            animation: shadow 2.25s forwards;
-          }
-        }
+    .material-icons {
+      animation: rotate-the-funk 2.25s forwards;
+      &:before {
+        animation: shadow 2.25s forwards;
       }
     }
-}
-  
   }
+}
 
 </style>

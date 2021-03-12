@@ -1,5 +1,4 @@
 <template>
-  <div>
     <div class="navigation screen">
       <div class="square"></div>
       <nav>
@@ -8,16 +7,7 @@
         <g-link to="/home#contact">Contact</g-link>
       </nav>
     </div>
-    <div class="navigation mobile">
-      <div class="hamburger">
-        <div class="hamburger_bigS"></div>
-        <div class="hamburger_fillS">
-          <nav></nav>
-        </div>
-        <div class="hamburger_lineS"></div>
-      </div>
-    </div>
-  </div>
+   
 </template>
 
 <script>
@@ -26,7 +16,7 @@ export default {
 };
 </script>
 
-<style scoped lang="scss">
+<style  lang="scss">
 @mixin center() {
   display: flex;
   justify-content: center;
@@ -36,7 +26,7 @@ export default {
   max-width: 1200px;
   // margin: auto;
   padding-top: 1rem;
-  position: absolute;
+  position: fixed;
   width: 70%;
   // height: 100px;
   top: 1rem;

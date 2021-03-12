@@ -17,7 +17,7 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss" >
 
 .landingpage{
   background-image:url("../assets/images/lines.png") ;
@@ -76,8 +76,9 @@ a{
 a{
   font-size: 3rem;
     color: white;
-  }} 
+  }
   h2{
   font-size: 1.5rem;
 }
+} 
 </style>
