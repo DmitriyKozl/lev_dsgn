@@ -9,7 +9,7 @@
         <g-image
           :src="require('!!assets-loader!~/assets/images/' + image)"
           class="logo"
-        ></g-image>
+        ></g-image> 
       </div>
     </section>
     <section v-if="template" class="template_container">
