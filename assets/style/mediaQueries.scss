@@ -148,6 +148,8 @@ a{
     flex-direction: column;
     height: unset;
     padding: 5rem 0;
+    .logo_container{
+        height: 100%;
     .logos {
       width: 300px;
       height: 300px;
@@ -159,6 +161,8 @@ a{
         }
       }
     }
+    }
+  
   }
 
   #contact {
