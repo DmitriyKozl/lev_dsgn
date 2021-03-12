@@ -41,13 +41,9 @@ export default {
         "Cheaux.jpg",
         "devriendendienst.jpg",
         "Hilsani.jpg",
-        "RavenpointPodcast.jpg",
+        "RavenpointPodcast.jpg","Thefood.png","JustforOne.png","lev.jpg"
       ],
-      templates: [
-        { id: 1, src: "ResumeTemplate.jpg" },
-        { id: 2, src: "ResumeTemplate.jpg" },
-        { id: 3, src: "ResumeTemplate.jpg" },
-      ],
+    
     };
   },
 
@@ -77,7 +73,6 @@ html {
 
 .work {
   @include center();
-  height: 100vh;
   flex-direction: column;
   background-image: url("../assets/images/lines.png");
   background-size: contain;
@@ -146,7 +141,7 @@ html {
     flex: 1 0 200px;
     padding-bottom: 4rem;
     padding-top: 0;
-
+      height: 100%;
     .logos,
     .templates {
       width: 300px;
