@@ -2,7 +2,6 @@
   <div class="layout">
     <Nav />
     <slot/>
-        <Footer />
 
   </div>
 </template>
@@ -16,12 +15,10 @@ query {
 </static-query>
 <script>
 import Nav from "~/components/Nav.vue";
-import Footer from "~/components/footer.vue";
 
 export default {
   metaInfo: "Daan",
   components: {
-Footer,
 Nav
   },
 };  
@@ -29,5 +26,14 @@ Nav
 </script>
 
 <style>
+.layout{
+  width: 100%;
 
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+    flex-direction: column;
+    
+
+}
 </style>

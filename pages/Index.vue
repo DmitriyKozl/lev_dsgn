@@ -1,84 +1,113 @@
 <template>
   <div class="landingpage">
-    <div class="title"><h1>Daan Van de Verre</h1>
-    <h2>gives  soul to  creative passion </h2></div>
-  <nav class="landingpage_nav">    
-    <div class="landingpage_nav_circle"><g-link to="/home#about">About</g-link></div>
-    <div class="landingpage_nav_triangle"><g-link to="/work">Work</g-link></div>
-<div class="landingpage_nav_square"><g-link to="/home#contact">Contact</g-link></div>
-  </nav>
+    <div class="title">
+      <h1>Daan Van de Verre</h1>
+      <h2>gives soul to creative passion</h2>
+    </div>
+    <nav class="nav">
+      <g-link to="/home#about">About</g-link>
+      <g-link to="/home#work">Work</g-link>
+      <g-link to="/home#contact">Contact</g-link>
+    </nav>
   </div>
-
 </template>
 
-<script>
-export default {
-
-}
-</script>
-
-<style lang="scss" >
-
-.landingpage{
-  background-image:url("../assets/images/lines.png") ;
-       background-size:cover ;
-  background-position: center;
+<style lang="scss">
+.landingpage {
   height: 100vh;
+  background-attachment: fixed;
+  width: 100%;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
   flex-direction: column;
 
-&_nav{
-   display: flex;
-  justify-content: space-evenly;
-  align-items: center;
- width: 90%;
- a{
-   font-size: 1.9rem;
- }
-  &_circle{
-    width: 300px;
-    height: 300px;
-  background-image:url("../assets/images/circle.png") ;
-      background-size:cover ;
-  background-position: center;
-  display: grid;
-  place-items: center;
-  }
-  &_square{
-    width: 300px;
-    height: 300px;
-  background-image:url("../assets/images/Square.png") ;
- display: grid;
-   background-size:cover ;
-  background-position: center;
-  place-items: center;
-  }
-  &_triangle{
-    width: 300px;
-    height: 300px;
-  background-image:url("../assets/images/triangle.png");
-  background-size:cover ;
-  background-position: center;
- display: flex;
- justify-content: center;
- align-items: center;
-  
-a{
-  font-size: 3rem;
-    margin: auto auto auto 2rem;
-    color: white;
+  position: relative;
+
+  .title {
+    z-index: 100;
+    h1 {
+      margin: 0 0 4rem 0;
+  color: #707070;
+    }
+    h2 {
+      font-size: 2rem;
+      margin: 0 0 4rem 0;
+  color: #707070;
+    }
   }
 
+  .nav {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    height: 250px;
+    a {
+                display: flex;
+      margin: 0 1rem;
+      padding-top: 1rem;
+      font-size: 3rem;
+      &:nth-child(1) {
+        color: #ffc7c7;
+        &::before {
+          margin: auto;
+          content: "";
+          width: 100px;
+          height: 5px;
+          background-color: #ffd700;
+          margin-right: 1rem;
+        }
+          &::after {
+          margin: auto;
+          content: "";
+          width: 100px;
+          height: 5px;
+          background-color: #ffd700;
+                    margin-left: 1rem;
+
+        }
+      }
+      &:nth-child(2) {
+        color: #ffd700;
+            &::before {   margin: auto;
+          content: "";
+          width: 100px;
+          height: 5px;
+          background-color: #0073b6;
+          margin-right: 1rem;
+      }
+              &::after {
+          margin: auto;
+          content: "";
+          width: 100px;
+          height: 5px;
+          background-color: #0073b6;
+                    margin-left: 1rem;
+
+        }
+      }
+      &:nth-child(3) {
+        color: #0073b6;
+
+          &::before {   margin: auto;
+          content: "";
+          width: 100px;
+          height: 5px;
+          background-color: #ffc7c7;
+          margin-right: 1rem;
+      }
+              &::after {
+          margin: auto;
+          content: "";
+          width: 100px;
+          height: 5px;
+          background-color: #ffc7c7;
+                    margin-left: 1rem;
+
+        }
+      }
+    }
   }
 }
-a{
-  font-size: 3rem;
-    color: white;
-  }
-  h2{
-  font-size: 1.5rem;
-}
-} 
 </style>

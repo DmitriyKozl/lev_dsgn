@@ -27,29 +27,15 @@ label {
   font-family: "bahnschrift";
   color: #707070;
   z-index: 3333;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
 }
 section {
   @include center;
   justify-content: space-evenly;
-  height: 100vh;
-  max-width: 1200px;
-  margin: auto;
-  width: 100%;
-  // padding: 4rem 0;
-  .content_title {
-    // width: 50%;
-    @include center;
-    margin-right: auto;
-    &::before {
-      content: "";
-      width: 300px;
-      height: 2.5px;
-      background: black;
-      display: flex;
-      z-index: 3333;
-    }
-  }
+  // height: 100vh;
+  height: 100%;
+
+  padding: 8rem 0
 }
 .banner {
   @include center;
@@ -66,78 +52,10 @@ section {
       margin-left: 1rem;
     }
   }
-
-
-  
 }
-.about {    
 
-  &_image {
-    @include center;
-    position: relative;
-    &_container {
-      width: 400px;
-      margin-top: 4rem;
-      img {
-        width: 100%;
-        object-fit: contain;
-        z-index: 1;
-        position: relative;
-        margin-top: auto;
-        margin-right: auto;
-        box-shadow: 7px -7px 0 white, 10px -10px 0 black;
-      }
-    }
-  
-  }
-  .content {
-    @include center;
-    position: relative;
-    justify-content: space-around;
-    flex-direction: column;
-    height: 70%;
-    width: 100%;
-    text-align: left;
-    &_title {
-      margin-left: auto;
-      margin-right: 4rem;
-    }
-    h2 {
-      // margin-right: auto;
-    }
-    &_text {
-      max-width: 50ch;
-      margin: auto;
-    }
-    .circle,
-    .outlineCircle {
-      position: absolute;
-      width: 200px;
-      height: 200px;
-      border-radius: 100px;
-      top: 0;
-      z-index: 1;
-    }
-    .circle {
-      background: #ffc7c7;
-      right: 2rem;
-    }
-    .outlineCircle {
-      background: transparent;
-      border: 2.5px solid #0073b6;
-      top: 2rem;
-      right: 0;
-      z-index: 0;
-    }
-  }
-  .test {
-    width: 90%;
-    display: flex;
-    p {
-      max-width: 70ch;
-    }
-  }
-}
-input,textarea {
+input,
+textarea {
   font-family: "bahnschrift";
-  color: black;}
+  color: black;
+}
