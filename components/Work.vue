@@ -1,40 +1,49 @@
 <template>
   <Layout>
-
-  <section class="work" id="work">
+    <section class="work" id="work">
       <h2>Work</h2>
-    <div class="logo_container">
-      <div v-for="image in workImages" :key="image" class="logos">
-        <a :href="require('~/assets/images/' + image)">
-          <img :src="require('~/assets/images/' + image)" class="logo"
-        /></a>
+      <div class="logo_container">
+        <div v-for="image in workImages" :key="image" class="logos">
+          <a :href="require('~/assets/images/' + image)">
+            <g-image :src="require('~/assets/images/' + image)" class="logo"
+          /></a>
+        </div>
       </div>
-    </div>
-  </section>
-    </Layout>
-
+    </section>
+  </Layout>
 </template>
 <script>
 import Layout from "~/layouts/Default.vue";
 
 export default {
-    components: {
+  components: {
     Layout,
   },
   data() {
     return {
       logo: true,
       template: false,
+      // workImages: [
+      //   "Spik&Span.jpg",
+      //   "Ravenpoint.jpg",
+      //   "Cheaux.jpg",
+      //   "devriendendienst.jpg",
+      //   "Hilsani.jpg",
+      //   "RavenpointPodcast.jpg",
+      //   "Thefood.png",
+      //   "JustforOne.png",
+      //   "lev.jpg",
+      //   "AB.png",
+      // ],
       workImages: [
-        "Spik&Span.jpg",
-        "Ravenpoint.jpg",
-        "Cheaux.jpg",
-        "devriendendienst.jpg",
-        "Hilsani.jpg",
-        "RavenpointPodcast.jpg",
-        "Thefood.png",
-        "JustforOne.png",
-        "lev.jpg",
+     
+        "hilsaniSmall.png",
+        "hilasaniMinSmall.png",
+        "lev1Small.png",
+        "lev2Small.png",
+        "justSmall.png",
+        "ABsmall.png",
+        "blogSmall.png",
       ],
     };
   },
@@ -53,18 +62,17 @@ export default {
   flex-direction: column;
   h2 {
     margin-right: auto;
-        display: flex;
-        &::after {
-          content: "";
-          width: 300px;
-          height: 2.5px;
-          background: black;
-          // display: flex;
-          margin: auto;
-          z-index: 3333;
-        }
-  
-      }
+    display: flex;
+    &::after {
+      content: "";
+      width: 300px;
+      height: 2.5px;
+      background: black;
+      // display: flex;
+      margin: auto;
+      z-index: 3333;
+    }
+  }
 
   .logo_container {
     @include center;

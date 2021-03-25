@@ -2,7 +2,7 @@
   <Layout>
     <section class="about" id="about">
       <div class="about_guy">
-        <div class="about_guy_image"></div>
+        <div  class="about_guy_image"></div>
 
         <div class="about_guy_text">
           <div class="circle"></div>
